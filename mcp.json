@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "algobharat-micro-settlement-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Algorand",
+        "PROJECT_TICKER": "ABUSDC"
+      },
+      "tools": [
+        {
+          "name": "verify_abusdc_invariants",
+          "description": "Verifies deterministic invariants for AlgoBharat Micro-Settlement AI on Algorand."
+        },
+        {
+          "name": "execute_abusdc_action",
+          "description": "Executes authenticated Payments state transition."
+        }
+      ]
+    }
+  }
+}
